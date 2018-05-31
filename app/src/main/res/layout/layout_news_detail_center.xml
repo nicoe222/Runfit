@@ -1,0 +1,23 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/image_news_detail"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+
+            android:scaleType="centerCrop"
+            />
+
+
+    </RelativeLayout>
+    </ScrollView>
+</merge>
