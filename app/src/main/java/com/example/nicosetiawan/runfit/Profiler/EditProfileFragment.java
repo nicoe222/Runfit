@@ -190,9 +190,6 @@ public class EditProfileFragment extends Fragment implements ConfirmPasswordDial
         return view;
     }
 
-
-
-
     /**
      * ------------------------------------- WIDGET ------------------------------------------------
      */

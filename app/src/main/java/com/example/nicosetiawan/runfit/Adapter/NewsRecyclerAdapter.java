@@ -1,6 +1,7 @@
 package com.example.nicosetiawan.runfit.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -11,7 +12,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import com.example.nicosetiawan.runfit.Login.FrontActivity;
+import com.example.nicosetiawan.runfit.Login.LoginActivity;
 import com.example.nicosetiawan.runfit.Models.News;
+import com.example.nicosetiawan.runfit.News.NewsDetailActivity;
 import com.example.nicosetiawan.runfit.R;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -44,7 +49,7 @@ public class NewsRecyclerAdapter extends RecyclerView.Adapter<NewsRecyclerAdapte
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        String content_data = news_list.get(position).getContent();
+        final String content_data = news_list.get(position).getContent();
         if (content_data.length() < 15 ){
             holder.setContentView(content_data);
         } else {
@@ -52,16 +57,33 @@ public class NewsRecyclerAdapter extends RecyclerView.Adapter<NewsRecyclerAdapte
             holder.setContentView(content_sub);
         }
 
-        String title_data = news_list.get(position).getTitle();
+        final String title_data = news_list.get(position).getTitle();
         holder.setTitleView(title_data);
 
-        String image_url = news_list.get(position).getImage_url();
+        final String image_url = news_list.get(position).getImage_url();
         holder.setImageView(image_url);
 
         long milliseconds = news_list.get(position).getTimestamp().getTime();
-        String dateString = new SimpleDateFormat("dd/MM/yyy").format(new Date(milliseconds)).toString();
+        final String dateString = new SimpleDateFormat("dd/MM/yyy").format(new Date(milliseconds)).toString();
         holder.settTimeView(dateString);
 
+
+        holder.mView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Toast.makeText(mContext, "TEXT" +dateString, Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(mContext,NewsDetailActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                intent.putExtra("content",content_data);
+                intent.putExtra("title",title_data);
+                intent.putExtra("image_url",image_url);
+                intent.putExtra("date",dateString);
+                mContext.startActivity(intent);
+
+
+
+            }
+        });
 
     }
 

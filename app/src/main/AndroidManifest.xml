@@ -41,6 +41,7 @@
         <activity android:name=".Weather.WeatherActivity"/>
         <activity android:name=".Profiler.PhotoActivity"/>
         <activity android:name=".Profiler.NextActivity"/>
+        <activity android:name=".News.NewsDetailActivity"/>
 
     </application>
 

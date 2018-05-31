@@ -62,14 +62,10 @@ public class NewsFragment extends Fragment {
         newsRecyclerAdapter = new NewsRecyclerAdapter(news_list);
         news_list_views.setLayoutManager(new LinearLayoutManager(getActivity()));
         news_list_views.setAdapter(newsRecyclerAdapter);
-
-
         start_news();
         SetupBottomNavigationView();
         return view;
     }
-
-
 
     private void SetupBottomNavigationView(){
         Log.d(TAG, "SetupBottomNavigationView: Setting Up BottomNavigationView");
@@ -81,9 +77,7 @@ public class NewsFragment extends Fragment {
     }
 
     private void start_news(){
-
         firebaseFirestore = FirebaseFirestore.getInstance();
-
         news_list_views.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
@@ -121,7 +115,6 @@ public class NewsFragment extends Fragment {
     }
 
     public void loadMoreNews(){
-
         Query nextQuery = firebaseFirestore.collection("News")
                 .orderBy("timestamp", Query.Direction.DESCENDING)
                 .startAfter(lastVisible)

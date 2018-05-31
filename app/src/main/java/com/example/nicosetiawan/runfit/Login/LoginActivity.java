@@ -52,11 +52,11 @@ public class LoginActivity extends AppCompatActivity {
         );
 
 
-        txt = (TextView) findViewById(R.id.logo1);
+        txt = findViewById(R.id.logo1);
         tp = Typeface.createFromAsset(this.getAssets(), "fonts/airstrikehalf.ttf");
         txt.setTypeface(tp);
-        mEmail = (EditText) findViewById(R.id.input_email);
-        mPassword = (EditText) findViewById(R.id.input_password);
+        mEmail =  findViewById(R.id.input_email);
+        mPassword = findViewById(R.id.input_password);
         mProgressbar = findViewById(R.id.progressbar);
         mProgressbar.setVisibility(View.GONE);
         wait = findViewById(R.id.wait);
@@ -72,7 +72,7 @@ public class LoginActivity extends AppCompatActivity {
      */
 
     private void init(){
-        Button btnlogin = (Button) findViewById(R.id.btn_login);
+        Button btnlogin = findViewById(R.id.btn_login);
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

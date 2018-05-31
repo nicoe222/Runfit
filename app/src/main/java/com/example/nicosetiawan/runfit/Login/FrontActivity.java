@@ -32,7 +32,7 @@ public class FrontActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
         );
-        
+
         txt = findViewById(R.id.logo1);
 
         tp = Typeface.createFromAsset(this.getAssets(), "fonts/airstrikehalf.ttf");
