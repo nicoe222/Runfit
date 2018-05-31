@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/history_top">
+
+            <include layout="@layout/layout_history_top"/>
+
+        </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/news_center"
+                android:layout_below="@id/news_top">
+
+                <include layout="@layout/layout_history_center"></include>
+
+        </RelativeLayout>
+
+        <!-- BOTTOM NAVIGATION -->
+        <include layout="@layout/layout_bottom_navigation"/>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

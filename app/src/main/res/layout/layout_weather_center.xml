@@ -1,0 +1,151 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_wba" />
+
+        <TextView
+            android:id="@+id/cityCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            tools:text="London, GB" />
+
+        <TextView
+            android:id="@+id/todayDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            android:text="No data"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/todayIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="end"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="151dp"
+            android:paddingRight="50dp"
+            android:text="c"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/white"
+            android:textSize="72dp" />
+
+        <TextView
+            android:id="@+id/todayTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="164dp"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="50sp"
+            tools:text="199" />
+
+
+        <TextView
+            android:id="@+id/lastUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/todayWind"
+            android:layout_marginStart="55dp"
+            android:gravity="center_vertical"
+            android:maxLines="3"
+            android:textColor="@color/white"
+            tools:text="Last update: 6:59 am" />
+
+        <TextView
+            android:id="@+id/todaySunrise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="128dp"
+            android:layout_marginStart="55dp"
+            android:text="Sunrise: 00:00"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/todaySunset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="89dp"
+            android:layout_marginStart="55dp"
+            android:text="Sunset: 00:00"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/todayWind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="165dp"
+            android:layout_marginEnd="80dp"
+            android:text="Wind: 0 m/s"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/todayPressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignStart="@+id/todayWind"
+            android:layout_alignTop="@+id/todaySunset"
+            android:text="Pressure: 0 hpa"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/todayHumidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:layout_alignStart="@+id/todayWind"
+            android:layout_alignTop="@+id/todaySunrise"
+            android:text="Humidity: 0 %"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+
+
+    </RelativeLayout>
+
+</merge>

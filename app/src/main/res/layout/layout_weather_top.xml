@@ -1,0 +1,62 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+       >
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/weatherToolBar"
+            android:background="@drawable/white_grey_bottom">
+            
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_centerVertical="true"
+                   android:text="Weather"
+                   android:textSize="20sp"
+                   android:textColor="@color/white"/>
+
+
+               <ImageView
+                   android:id="@+id/action_search"
+                   android:layout_width="wrap_content"
+                   android:layout_height="match_parent"
+                   android:layout_alignParentEnd="true"
+                   android:layout_alignParentTop="true"
+                   android:layout_marginEnd="96dp"
+                   android:src="@drawable/ic_magnify_white_24dp" />
+
+               <ImageView
+                   android:id="@+id/action_refresh"
+                   android:layout_width="wrap_content"
+                   android:layout_height="match_parent"
+                   android:layout_alignParentEnd="true"
+                   android:layout_alignParentTop="true"
+                   android:layout_marginEnd="58dp"
+                   android:src="@drawable/ic_refresh_white_24dp" />
+
+               <ImageView
+                   android:id="@+id/refreshLocation"
+                   android:layout_width="wrap_content"
+                   android:layout_height="match_parent"
+                   android:layout_alignParentEnd="true"
+                   android:layout_centerVertical="true"
+                   android:layout_alignParentRight="true"
+                   android:paddingRight="20dp"
+                   android:src="@drawable/ic_my_location_white_24dp" />
+
+
+           </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+</merge>

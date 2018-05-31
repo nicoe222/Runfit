@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "307985196118",
+    "firebase_url": "https://runfit-nico.firebaseio.com",
+    "project_id": "runfit-nico",
+    "storage_bucket": "runfit-nico.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:307985196118:android:54f05f8efd3f5653",
+        "android_client_info": {
+          "package_name": "com.example.nicosetiawan.runfit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "307985196118-4ac36tdpegbataph4g53ktn9bjisl072.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.nicosetiawan.runfit",
+            "certificate_hash": "b052284e59c58ad3f3027863461b2509b71803e0"
+          }
+        },
+        {
+          "client_id": "307985196118-94nmbtocrrqf2lsqg9jg1i2pjs2gscgo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZT-gaC0h2l0c5kdGQkVXGLyyCwlnz6KY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "307985196118-94nmbtocrrqf2lsqg9jg1i2pjs2gscgo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

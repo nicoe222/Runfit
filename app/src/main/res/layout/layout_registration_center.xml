@@ -1,0 +1,248 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:textColorHint="@color/blue">
+
+            <EditText
+                android:id="@+id/input_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Full Name"
+                android:inputType="text" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="85dp"
+            android:textColorHint="@color/blue">
+
+            <EditText
+                android:id="@+id/input_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email Addres"
+                android:inputType="textEmailAddress" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="165dp"
+            android:textColorHint="@color/blue"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/accent">
+
+            <EditText
+
+                android:id="@+id/input_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_above="@+id/btn_login"
+            android:layout_marginStart="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="100dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_marginStart="160dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/progressbar"
+            android:id="@+id/wait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/accent"
+            android:text="Please Wait...."
+            android:visibility="gone"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="244dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:text="BIRTHDATE"
+                android:textColor="@color/blue"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:id="@+id/clickbirthdate"/>
+
+            <TextView
+                android:id="@+id/birthdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:paddingEnd="20dp"
+                android:text="17/12/1994"
+
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="193dp">
+
+            <TextView
+                android:id="@+id/clickheight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:text="HEIGHT"
+                android:textColor="@color/blue"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="50dp"
+                android:hint="165"
+
+                android:textColor="@color/blue"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:paddingEnd="20dp"
+                android:text="Cm"
+                android:textColor="@color/blue"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="144dp">
+
+            <TextView
+                android:id="@+id/clickweight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:text="WEIGHT"
+                android:textColor="@color/blue"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:text="Kg"
+                android:textColor="@color/blue"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="50dp"
+                android:hint="70"
+
+                android:textColor="@color/blue"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="245dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="50dp">
+
+            <RadioGroup
+                android:id="@+id/genderradio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radiomale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="@string/male"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/radiofemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:text="@string/female" />
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/btn_rounded"
+            android:text="JOIN"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+</merge>

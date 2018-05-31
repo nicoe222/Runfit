@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    tools:context=".News.NewsActivity">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
+        android:layout_marginBottom="5dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="15dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:id="@+id/cardImage"
+                android:scaleType="centerCrop"
+                android:src="@drawable/new_zeland"
+                />
+
+            <TextView
+                android:id="@+id/postdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardImage"
+
+                android:text="Post Date : " />
+
+            <TextView
+                android:id="@+id/datepost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardImage"
+                android:layout_toEndOf="@+id/postdate"
+                android:hint="31-12-1994" />
+
+
+            <TextView
+                android:id="@+id/cardTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/postdate"
+                android:gravity="center_vertical"
+                android:text="Jangan Lakukan 5 Hal Ini Usai Olahraga Lari"
+                android:textColor="@color/textblack"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/readMore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Read More"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:paddingRight="5dp"
+                android:textAlignment="textEnd"
+                android:textColor="@color/blue"
+                android:paddingBottom="3dp"
+                android:scaleType="centerCrop"
+                />
+
+            <ProgressBar
+                android:id="@+id/cardProgressDialog"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="75dp" />
+
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/cardTitle"
+                android:ems="10"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed eros quis nulla suscipit placerat ut vitae est. Suspendisse varius bibendum suscipit."
+                android:inputType="textMultiLine" />
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
