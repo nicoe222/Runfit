@@ -32,16 +32,14 @@ public class FrontActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
         );
-
-        //getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-
-        txt = (TextView) findViewById(R.id.logo1);
+        
+        txt = findViewById(R.id.logo1);
 
         tp = Typeface.createFromAsset(this.getAssets(), "fonts/airstrikehalf.ttf");
         txt.setTypeface(tp);
 
-        login = (TextView) findViewById(R.id.txtlogin);
-        signup = (Button) findViewById(R.id.btn_signup) ;
+        login = findViewById(R.id.txtlogin);
+        signup =  findViewById(R.id.btn_signup) ;
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
