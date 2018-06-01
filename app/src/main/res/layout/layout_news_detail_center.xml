@@ -2,8 +2,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -13,10 +14,54 @@
             android:id="@+id/image_news_detail"
             android:layout_width="match_parent"
             android:layout_height="250dp"
-
+            android:src="@drawable/new_zeland"
             android:scaleType="centerCrop"
             />
 
+        <TextView
+            android:id="@id/postdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/image_news_detail"
+            android:layout_marginLeft="5dp"
+            android:text="Post Date :" />
+
+        <TextView
+            android:id="@+id/datepost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image_news_detail"
+            android:layout_toEndOf="@+id/postdate"
+            android:layout_marginStart="2dp"
+            android:hint="31/12/1994" />
+
+        <TextView
+            android:textStyle="bold"
+            android:textColor="@color/textblack"
+            android:id="@+id/titledetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/postdate"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:hint="JUDUL JUDUL JUDUL JUDUL JUDUL JUDUL JUDUL JUDUL JUDUL"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_marginTop="3dp"
+            android:layout_below="@+id/titledetail"
+            android:id="@+id/contentdetail"
+            android:breakStrategy="high_quality"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="0dp"
+            android:ems="10"
+            />
 
     </RelativeLayout>
     </ScrollView>
