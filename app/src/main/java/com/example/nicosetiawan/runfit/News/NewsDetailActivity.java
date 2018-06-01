@@ -6,7 +6,9 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.nicosetiawan.runfit.R;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
@@ -46,17 +48,28 @@ public class NewsDetailActivity extends AppCompatActivity {
             Log.d(TAG, "getIncomingIntent: foound Intent Extra");
 
             String imageURL = getIntent().getStringExtra("image_url");
+            String content = getIntent().getStringExtra("content");
+            String title = getIntent().getStringExtra("title");
+            String date = getIntent().getStringExtra("date");
 
-
-            setNewsDetail(imageURL);
+            setNewsDetail(imageURL,content,title,date);
         }
     }
 
-    private void setNewsDetail(String imageURL){
+    private void setNewsDetail(String imageURL, String content, String title, String date){
+
+
+        TextView mcontent = findViewById(R.id.contentdetail);
+        mcontent.setText(content);
+
+        TextView mtitle = findViewById(R.id.titledetail);
+        mtitle.setText(title);
+
+        TextView mdate = findViewById(R.id.datepost);
+        mdate.setText(date);
 
 
         ImageView image_url = findViewById(R.id.image_news_detail);
-
         ImageLoader imageLoader = ImageLoader.getInstance();
 
         int defaultImage = this.getResources().getIdentifier("@drawable/image_failed",null,this.getPackageName());
