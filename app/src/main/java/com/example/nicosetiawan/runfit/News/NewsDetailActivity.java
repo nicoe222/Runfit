@@ -68,7 +68,6 @@ public class NewsDetailActivity extends AppCompatActivity {
         TextView mdate = findViewById(R.id.datepost);
         mdate.setText(date);
 
-
         ImageView image_url = findViewById(R.id.image_news_detail);
         ImageLoader imageLoader = ImageLoader.getInstance();
 
