@@ -1,4 +1,5 @@
-<merge xmlns:android="http://schemas.android.com/apk/res/android"
+<merge xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <RelativeLayout
@@ -9,11 +10,13 @@
 
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="220dp">
+            android:layout_height="220dp"
+            android:id="@+id/cardviewstart">
 
           <RelativeLayout
               android:layout_width="match_parent"
-              android:layout_height="wrap_content">
+              android:layout_height="wrap_content"
+              android:id="@+id/cardlayout">
 
               <TextView
                   android:id="@+id/duration"
@@ -72,11 +75,35 @@
                   android:layout_alignStart="@+id/pace"
                   android:layout_below="@+id/distance"
                   android:text="@string/avg_pace_min_km" />
-
-
           </RelativeLayout>
 
         </android.support.v7.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/map"
+                tools:context=".Activities.HomeActivity"
+                android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+
+            <Button
+                android:id="@+id/startactivity"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:text="START"
+                android:background="@drawable/btn_rounded_start"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="80dp" />
+
+        </RelativeLayout>
     </RelativeLayout>
 
 </merge>
