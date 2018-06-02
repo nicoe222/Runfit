@@ -15,6 +15,9 @@
     <color name="material_red_400">#EF5350</color>
     <color name="reds">#e74c3c</color>
     <color name="green">#2ecc71</color>
+    <color name="warning">#e67e22</color>
+    <color name="stop">#ff3f34</color>
+
 
 
 </resources>
