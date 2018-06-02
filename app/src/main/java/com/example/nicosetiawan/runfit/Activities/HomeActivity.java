@@ -1,5 +1,6 @@
 package com.example.nicosetiawan.runfit.Activities;
 
+
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -10,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.nicosetiawan.runfit.Login.FrontActivity;
+
 import com.example.nicosetiawan.runfit.R;
 import com.example.nicosetiawan.runfit.Utils.BottomNavigationViewHelper;
 import com.example.nicosetiawan.runfit.Utils.UniversalImageLoader;
@@ -40,19 +42,20 @@ public class HomeActivity extends AppCompatActivity {
         setupFirebaseAuth();
     }
 
-    private void initImageLoader() {
-        UniversalImageLoader universalImageLoader = new UniversalImageLoader(mContext);
-        ImageLoader.getInstance().init(universalImageLoader.getConfig());
-    }
 
-    private void SetupBottomNavigationView() {
+    private void SetupBottomNavigationView(){
         Log.d(TAG, "SetupBottomNavigationView: Setting Up BottomNavigationView");
-        BottomNavigationViewEx bottomNavigationViewEx = (BottomNavigationViewEx) findViewById(R.id.bottomNavViewBar);
+        BottomNavigationViewEx bottomNavigationViewEx = findViewById(R.id.bottomNavViewBar);
         BottomNavigationViewHelper.SetupBottomNavigationView(bottomNavigationViewEx);
         BottomNavigationViewHelper.enableNavigation(mContext, bottomNavigationViewEx);
         Menu menu = bottomNavigationViewEx.getMenu();
         MenuItem menuItem = menu.getItem(ACTIVITY_NUM);
         menuItem.setChecked(true);
+    }
+
+    private void initImageLoader() {
+        UniversalImageLoader universalImageLoader = new UniversalImageLoader(mContext);
+        ImageLoader.getInstance().init(universalImageLoader.getConfig());
     }
 
     /**
@@ -80,7 +83,6 @@ public class HomeActivity extends AppCompatActivity {
                 } else {
                     Log.d(TAG, "onAuthStateChanged: Sign Out");
                 }
-
             }
         };
     }
@@ -99,8 +101,6 @@ public class HomeActivity extends AppCompatActivity {
             mAuth.removeAuthStateListener(mAuthListener);
         }
     }
-
-
 
 //END
 }
