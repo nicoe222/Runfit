@@ -12,8 +12,6 @@
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    
-
 
     <application
         android:allowBackup="true"
@@ -22,10 +20,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCmY2-3bAwJMbtIgB-x9-5Ak6lWnLT41S0"/>
+            android:value="AIzaSyAxFvKcbK8jPBBg9bkiPFQEtYN3vT776GA"/>
+
 
         <meta-data
             android:name="com.google.android.gms.version"
@@ -53,6 +51,5 @@
         <activity android:name=".News.NewsDetailActivity"/>
 
     </application>
-
 
 </manifest>

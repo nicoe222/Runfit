@@ -29,7 +29,6 @@
             <include layout="@layout/layout_home_center"/>
         </RelativeLayout>
 
-
         <!-- BOTTOM NAVIGATION -->
         <include layout="@layout/layout_bottom_navigation"/>
     </RelativeLayout>
