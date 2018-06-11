@@ -73,6 +73,9 @@ dependencies {
 
     implementation 'com.google.android.gms:play-services:11.8.0'
 
+    // GPS Signal Library
+    implementation 'com.github.hzw1199:AndroidGpsStatus:1.1'
+
 
 }
 apply plugin: 'com.google.gms.google-services'

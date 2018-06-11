@@ -18,6 +18,34 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/cardlayout">
 
+                <com.adam.gpsstatus.GpsStatusTextView
+                    android:id="@+id/gpsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="18dp"
+                    android:text="GPS"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    app:colorClosed="@color/gps_icon_red"
+                    app:colorFixed="@color/gps_icon_green"
+                    app:colorUnFixed="@color/gps_icon_yellow"/>
+
+                <com.adam.gpsstatus.GpsStatusImageView
+                    android:id="@+id/gpsImage"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="5dp"
+                    app:drawable0="@drawable/ic_gps_0_24dp"
+                    app:drawable1="@drawable/ic_gps_1_24dp"
+                    app:drawable2="@drawable/ic_gps_2_24dp"
+                    app:drawable3="@drawable/ic_gps_3_24dp"
+                    app:thr_1_2="4"
+                    app:thr_2_3="7"/>
+
                 <TextView
                     android:id="@+id/duration"
                     android:layout_width="wrap_content"

@@ -21,6 +21,7 @@ import android.widget.Button;
 
 import android.widget.Toast;
 
+import com.adam.gpsstatus.GpsStatusProxy;
 import com.example.nicosetiawan.runfit.History.HistoryActivity;
 import com.example.nicosetiawan.runfit.Login.FrontActivity;
 
@@ -65,6 +66,7 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1234;
     private static final float DEFAULT_ZOOM = 17f;
     private static final int PLACE_PICKER_REQUEST = 1;
+    private GpsStatusProxy proxy;
 
     private Boolean mLocationPermissionsGranted = false;
     private GoogleMap mMap;
@@ -87,7 +89,16 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
         // FIREBASE
         setupFirebaseAuth();
         getLocationPermission();
+        proxy = GpsStatusProxy.getInstance(getApplicationContext());
+        proxy.register();
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        locationManager.removeUpdates(locationListener);
+        proxy.unRegister();
     }
 
 
@@ -99,20 +110,12 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
             getDeviceLocation();
 
             if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
-                    != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this,
+                   != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this,
                     Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                 return;
             }
             mMap.setMyLocationEnabled(true);
             //mMap.getUiSettings().setMyLocationButtonEnabled(false);
-            googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
-                @Override
-                public void onMapClick(LatLng latLng) {
-
-                }
-            });
-
-            //init();
         }
     }
 
@@ -158,6 +161,7 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
                     mLocationPermissionsGranted = true;
                     //initialize our map
                     initMap();
+                    proxy.register();
                 }
             }
         }
@@ -173,32 +177,55 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
     private void getDeviceLocation(){
         Log.d(TAG, "getDeviceLocation: getting the devices current location");
 
-        mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
-
-        try{
-            if(mLocationPermissionsGranted){
-
-                final Task location = mFusedLocationProviderClient.getLastLocation();
-                location.addOnCompleteListener(new OnCompleteListener() {
-                    @Override
-                    public void onComplete(@NonNull Task task) {
-                        if(task.isSuccessful()){
-                            Log.d(TAG, "onComplete: found location!");
-                            Location currentLocation = (Location) task.getResult();
-
-                            moveCamera(new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude()),
-                                    DEFAULT_ZOOM,
-                                    "My Location");
-                        }else{
-                            Log.d(TAG, "onComplete: current location is null");
-                            Toast.makeText(HomeActivity.this, "unable to get current location", Toast.LENGTH_SHORT).show();
-                        }
+        locationListener = new LocationListener() {
+            @Override
+            public void onLocationChanged(Location location) {
+                proxy.notifyLocation(location);
+                double latitude = location.getLatitude();
+                double longitude = location.getLongitude();
+                final LatLng latLng = new LatLng(latitude, longitude);
+                mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(HomeActivity.this);
+                try{
+                    if(mLocationPermissionsGranted){
+                        final Task location1 = mFusedLocationProviderClient.getLastLocation();
+                        location1.addOnCompleteListener(new OnCompleteListener() {
+                            @Override
+                            public void onComplete(@NonNull Task task) {
+                                if(task.isSuccessful()){
+                                    Log.d(TAG, "onComplete: found location!");
+                                    Location currentLocation = (Location) task.getResult();
+                                    moveCamera(new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude()),
+                                            DEFAULT_ZOOM,
+                                            "My Location");
+                                    mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, DEFAULT_ZOOM));
+                                }else{
+                                    Log.d(TAG, "onComplete: current location is null");
+                                    Toast.makeText(HomeActivity.this, "unable to get current location", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
                     }
-                });
+                }catch (SecurityException e){
+                    Log.e(TAG, "getDeviceLocation: SecurityException: " + e.getMessage() );
+                }
             }
-        }catch (SecurityException e){
-            Log.e(TAG, "getDeviceLocation: SecurityException: " + e.getMessage() );
-        }
+
+            @Override
+            public void onStatusChanged(String provider, int status, Bundle extras) {
+
+            }
+
+            @Override
+            public void onProviderEnabled(String provider) {
+
+            }
+
+            @Override
+            public void onProviderDisabled(String provider) {
+
+            }
+        };
+
     }
 
     private void moveCamera(LatLng latLng, float zoom, String title){
@@ -212,23 +239,6 @@ public class HomeActivity extends AppCompatActivity implements OnMapReadyCallbac
             mMap.addMarker(options);
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     private void SetupBottomNavigationView(){
         Log.d(TAG, "SetupBottomNavigationView: Setting Up BottomNavigationView");
