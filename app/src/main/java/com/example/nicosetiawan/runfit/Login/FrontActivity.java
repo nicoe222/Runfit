@@ -34,7 +34,6 @@ public class FrontActivity extends AppCompatActivity {
         );
 
         txt = findViewById(R.id.logo1);
-
         tp = Typeface.createFromAsset(this.getAssets(), "fonts/airstrikehalf.ttf");
         txt.setTypeface(tp);
 

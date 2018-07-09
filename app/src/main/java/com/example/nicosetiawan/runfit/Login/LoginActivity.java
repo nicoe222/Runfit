@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText mEmail,mPassword;
     TextView txt;
     Typeface tp;
-    private TextView wait;
+    private TextView wait,forgot;
     private ProgressBar mProgressbar;
     private Context mContext;
 
@@ -62,9 +62,18 @@ public class LoginActivity extends AppCompatActivity {
         wait = findViewById(R.id.wait);
         wait.setVisibility(View.GONE);
         mContext = LoginActivity.this;
-
+        forgot = findViewById(R.id.forgotpassword);
         setupFirebaseAuth();
         init();
+
+        forgot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this,ForgotPasswordActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(intent);
+            }
+        });
     }
 
     /**

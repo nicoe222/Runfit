@@ -49,6 +49,7 @@
         <activity android:name=".Profiler.PhotoActivity"/>
         <activity android:name=".Profiler.NextActivity"/>
         <activity android:name=".News.NewsDetailActivity"/>
+        <activity android:name=".Login.ForgotPasswordActivity"/>
 
     </application>
 
