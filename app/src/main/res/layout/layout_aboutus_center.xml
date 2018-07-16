@@ -8,8 +8,9 @@
         android:layout_height="match_parent">
 
         <android.support.v7.widget.CardView
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
+            android:layout_height="210dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             app:cardUseCompatPadding="true">
@@ -20,19 +21,87 @@
                 android:layout_width="90dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="3dp"
                 android:text="runfit"
                 android:textSize="30sp" />
 
             <TextView
+                android:id="@+id/vers"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ver 1.0.0"
                 android:textSize="10sp"
                 android:textStyle="italic"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="37dp"/>
+                android:layout_marginTop="34dp"/>
 
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"
+                android:layout_marginTop="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Concept, Design and Development :" />
+            <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="65dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nico Setiawan (06.2013.1.06189)" />
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="80dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Surabaya, Indonesia " />
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="95dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(+62)812-5955-9338/" />
+            <TextView
+
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="110dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="nicoesetiawan@gmail.com" />
+            <TextView
+                android:textStyle="italic"
+                android:textColor="@color/blue"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="125dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="http://runfit.web.id/" />
+
+
+
+            <ImageView
+                android:id="@+id/ig"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/instagram_icon"/>
+
+            <ImageView
+                android:id="@+id/fb"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="45dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/fb_icon"/>
+
+            <View
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="45dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/linegrey" />
 
             </android.support.v7.widget.CardView>
 
