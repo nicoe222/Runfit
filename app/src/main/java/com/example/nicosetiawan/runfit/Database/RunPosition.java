@@ -1,8 +1,5 @@
 package com.example.nicosetiawan.runfit.Database;
 
-/**
- * Created by rusmana on 10/09/2018.
- */
 
 public class RunPosition {
     private String posId;

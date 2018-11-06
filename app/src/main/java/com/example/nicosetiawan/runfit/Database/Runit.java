@@ -2,9 +2,7 @@ package com.example.nicosetiawan.runfit.Database;
 
 import java.io.Serializable;
 
-/**
- * Created by rusmana on 10/09/2018.
- */
+
 
 public class Runit implements Serializable {
 
