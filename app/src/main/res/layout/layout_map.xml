@@ -17,14 +17,7 @@
         tools:layout_editor_absoluteX="87dp"
         tools:layout_editor_absoluteY="491dp" />
 
-    <Button
-        android:layout_width="220dp"
-        android:layout_height="wrap_content"
-        android:text="START"
-        android:background="@drawable/btn_rounded_start"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="80dp" />
+
 
 
 

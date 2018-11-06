@@ -10,6 +10,7 @@
         android:layout_centerHorizontal="true"
         android:textSize="30dp"
         android:layout_margin="40dp"
+        android:textColor="@color/white"
         android:text="OPEN CAMERA"
         android:background="@drawable/btn_rounded_photo"
         android:id="@+id/btnLaunchCamera"/>

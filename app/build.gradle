@@ -1,20 +1,34 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'runfit'
+            keyPassword 'runfit!@#'
+            storeFile file('D:/Android/kaeka/runfit.jks')
+            storePassword 'runfit!@#'
+        }
+    }
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.example.nicosetiawan.runfit"
-        minSdkVersion 21
+        minSdkVersion 19
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        signingConfig signingConfigs.config
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable true
+            signingConfig signingConfigs.config
         }
+    }
+    productFlavors {
     }
 }
 
@@ -26,57 +40,50 @@ buildscript {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //implementation 'com.android.support:design:27.1.1'
     implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:animated-vector-drawable:27.1.1'
+    implementation 'com.android.support:mediarouter-v7:27.1.1'
+    //implementation 'com.android.support:exifinterface:27.1.1'
     implementation 'com.android.support:gridlayout-v7:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
     implementation 'com.android.support:support-v4:27.1.1'
-
+    implementation 'com.android.support:multidex:1.0.3'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     //Library For Cordinator Layout
-
     //Library for Bottom Navigation Bar
     implementation 'com.github.ittianyu:BottomNavigationViewEx:1.2.4'
     implementation 'com.android.support:design:27.1.1'
-
     // CardView Library
     implementation 'com.android.support:recyclerview-v7:27.1.1'
     implementation 'com.android.support:cardview-v7:27.1.1'
-
-
     // Circle Image View
     implementation 'de.hdodenhof:circleimageview:2.2.0'
     implementation files('libs/CircleImageView/gradle/wrapper/gradle-wrapper.jar')
-
     //Universal Image Loader
     implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
-
     //transparent Number Picker
     implementation 'com.shawnlin:number-picker:2.4.6'
-
     implementation 'com.google.android.apps.dashclock:dashclock-api:+'
     implementation 'com.roughike:bottom-bar:1.4.0.1'
     implementation 'com.diogobernardino:williamchart:2.2'
-
     //implementation 'com.google.firebase:firebase-core:11.8.0'
     implementation 'com.google.firebase:firebase-auth:11.8.0'
     implementation 'com.google.firebase:firebase-database:11.8.0'
     implementation 'com.google.firebase:firebase-firestore:11.8.0'
     implementation 'com.google.firebase:firebase-storage:11.8.0'
-
     // PROGRESS BAR LIBRARY
     implementation 'me.zhanghai.android.materialprogressbar:library:1.4.2'
-
     // library sneaker
     implementation 'com.irozon.sneaker:sneaker:1.0.1'
-
     implementation 'com.google.android.gms:play-services:11.8.0'
-
+    implementation 'com.afollestad.material-dialogs:commons:0.9.6.0'
     // GPS Signal Library
-    implementation 'com.github.hzw1199:AndroidGpsStatus:1.1'
-
-
+    implementation('com.github.hzw1199:AndroidGpsStatus:1.1') {
+        exclude group: 'com.android.support'
+    }
 }
 apply plugin: 'com.google.gms.google-services'
 

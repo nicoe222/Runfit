@@ -38,20 +38,33 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
         <activity android:name=".History.HistoryActivity" />
+        <activity android:name=".History.HistoryDetailActivity" />
+
         <activity android:name=".News.NewsActivity" />
         <activity android:name=".Profiler.ProfilerActivity" />
         <activity android:name=".Profiler.Settings"/>
         <activity android:name=".Login.FrontActivity"/>
+
         <activity android:name=".Login.LoginActivity"/>
+
         <activity android:name=".Login.RegistrationActivity"/>
+
         <activity android:name=".Weather.WeatherActivity"/>
         <activity android:name=".Profiler.PhotoActivity"/>
         <activity android:name=".Profiler.NextActivity"/>
         <activity android:name=".News.NewsDetailActivity"/>
         <activity android:name=".Login.ForgotPasswordActivity"/>
 
-
+        <service
+            android:name=".Service.LocationService"
+            android:enabled="true"
+            android:exported="false"></service>
     </application>
-
+    <!--
+    Email : nicoesetiawan@gmail.com
+    Password : 0123456nicoe
+    -->
 </manifest>

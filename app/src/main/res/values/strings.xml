@@ -197,6 +197,7 @@
     <string name="news_fragment">News</string>
     <string name="duration">Duration</string>
     <string name="distance_km">Distance (Km)</string>
+    <string name="distance_m">Distance (M)</string>
     <string name="_0_00">0,00</string>
     <string name="_00_00">00:00</string>
     <string name="avg_pace_min_km">Avg. Pace (min/Km)</string>
@@ -204,5 +205,13 @@
     <string name="API_KEY">AIzaSyAxFvKcbK8jPBBg9bkiPFQEtYN3vT776GA</string>
     <string name="home_fragment">Home</string>
 
-
+    <string name="save_history">Simpan History ?</string>
+    <string name="delete_history">Delete</string>
+    <string name="confirm_history">Do you really want to delete the selected session ?</string>
+    <string name="confirmasi_save_history">History Title</string>
+    <string name="title_gps">Cek GPS.</string>
+    <string name="desc_gps">GPS device mati, nyalakan GPS ?</string>
+    <string name="tips_page">Tips</string>
+    <string name="tips">Tips</string>
+    <string name="_00_00_00">00:00:00</string>
 </resources>

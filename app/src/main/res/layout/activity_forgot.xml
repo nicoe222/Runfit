@@ -55,6 +55,8 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
             android:background="@drawable/btn_rounded"
+            android:textColor="@color/white"
+            android:textSize="16sp"
             android:text="Reset Password" />
 
         <TextView

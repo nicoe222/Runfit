@@ -8,25 +8,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <RelativeLayout
+        <LinearLayout
+            android:id="@+id/history_top"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/history_top">
+            android:orientation="vertical">
 
-            <include layout="@layout/layout_history_top"/>
+            <include layout="@layout/layout_history_top" />
 
-        </RelativeLayout>
+        </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/news_center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/news_top"
+            android:paddingTop="60dp"
+            android:orientation="vertical">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/news_center"
-                android:layout_below="@id/news_top">
-
-                <include layout="@layout/layout_history_center"></include>
-
-        </RelativeLayout>
+            <include layout="@layout/layout_history_center"></include>
+        </LinearLayout>
 
         <!-- BOTTOM NAVIGATION -->
         <include layout="@layout/layout_bottom_navigation"/>

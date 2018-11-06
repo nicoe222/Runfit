@@ -1,6 +1,7 @@
 package com.example.nicosetiawan.runfit.Utils;
 
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -37,26 +38,31 @@ public class BottomNavigationViewHelper {
                         Intent intent1 = new Intent(context, NewsActivity.class);
                         intent1.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                         context.startActivity(intent1);
+                        ((Activity) context).finish();
                         break;
                     case R.id.ic_history:
                         Intent intent2 = new Intent(context, HistoryActivity.class);
                         intent2.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                         context.startActivity(intent2);
+                        //((Activity) context).finish();
                         break;
                     case R.id.ic_home:
                         Intent intent3 = new Intent(context, HomeActivity.class);
                         intent3.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                         context.startActivity(intent3);
+                        //((Activity) context).finish();
                         break;
                     case R.id.ic_weather:
                         Intent intent4 = new Intent(context, WeatherActivity.class);
                         intent4.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                         context.startActivity(intent4);
+                        //((Activity) context).finish();
                         break;
                     case R.id.ic_profile:
                         Intent intent5 = new Intent(context, ProfilerActivity.class);
                         intent5.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                         context.startActivity(intent5);
+                        //((Activity) context).finish();
                         break;
                 }
                 return false;

@@ -67,7 +67,7 @@
 
         </android.support.design.widget.TextInputLayout>
 
-        <android.support.v7.widget.AppCompatButton
+        <Button
             android:id="@+id/btn_login"
             android:layout_width="330dp"
             android:layout_height="wrap_content"
@@ -75,7 +75,9 @@
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/password"
             android:background="@drawable/btn_rounded"
-            android:text="LOG IN" />
+            android:textColor="@color/white"
+            android:text="LOGIN"  />
+
 
         <TextView
             android:id="@+id/logo1"

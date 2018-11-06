@@ -19,6 +19,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -82,6 +83,15 @@ public class RegistrationActivity extends AppCompatActivity {
         calendar();
         setupFirebaseAuth();
         register();
+
+        ImageView backArrow = findViewById(R.id.BackMenu);
+        backArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d(TAG, "onClick: Close");
+                finish();
+            }
+        });
     }
 
     private void closeafter(){
