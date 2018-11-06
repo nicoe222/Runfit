@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ActivityMain">
+
+    <item
+        android:id="@+id/actDelete"
+        android:orderInCategory="100"
+        android:title="Search Friend"
+        android:icon="@drawable/ic_delete"
+        app:showAsAction="always" />
+
+</menu>

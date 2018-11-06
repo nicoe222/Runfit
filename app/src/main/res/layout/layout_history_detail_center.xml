@@ -1,0 +1,123 @@
+<merge xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/cardview1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/mapss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                tools:context=".Activities.HomeActivity" />
+
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardviewstart"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_below="@+id/mapss">
+
+            <RelativeLayout
+                android:id="@+id/cardlayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/running"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Running" />
+
+                <TextView
+                    android:id="@+id/duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_below="@+id/running"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="45dp"
+                    android:hint="00:00:00"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/duration1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/running"
+                    android:layout_below="@+id/duration"
+                    android:text="@string/duration"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignLeft="@+id/duration"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="45dp"
+                    android:ellipsize="end"
+                    android:hint="@string/_0_00"
+                    android:textAlignment="center"
+                    android:textSize="25sp"
+                    tools:text="999,99" />
+
+                <TextView
+                    android:id="@+id/labDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/distance"
+                    android:layout_below="@+id/duration"
+                    android:hint="@string/distance_km"
+                    android:textAlignment="center"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/pace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/lblKec"
+                    android:layout_alignTop="@+id/duration"
+                    android:hint="@string/_00_00"
+                    android:textSize="25sp"
+                    tools:text="1234" />
+
+                <TextView
+                    android:id="@+id/lblKec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/duration"
+                    android:layout_marginRight="15dp"
+                    android:text="@string/avg_pace_min_km"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+    </RelativeLayout>
+
+
+
+</merge>
